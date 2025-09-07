@@ -22,6 +22,7 @@ Two new models were added to the `prisma/schema.prisma` file to create the neces
 - **Fields:**
   - `id`: Unique identifier, auto-incrementing.
   - `timestamp`: The date and time of the visitor's entry.
+  - `ipAddress` : Optional it says about the user IP address for security.
 
 ### API Endpoints
 
