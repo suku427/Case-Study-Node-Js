@@ -84,3 +84,19 @@ model Wishlist {
   user      User    @relation(fields: [userId], references: [id], onDelete: Cascade)
   userId    String
 }
+
+// New models in the schema
+
+model product_trends {
+  id              Int      @id @default(autoincrement())
+  trend_date      DateTime @unique
+  total_products  Int
+  products_added  Int
+  products_removed Int
+}
+
+model visitor_logs {
+  id        Int   @id @default(autoincrement())
+  timestamp DateTime @default(now())
+  ipAddress String?
+}
